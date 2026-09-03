@@ -1,18 +1,18 @@
-// Change only these two names to personalise the whole website.
+// Change these details to personalise the whole website.
 window.DATE_INVITE_CONFIG = {
-  inviteeName: 'Yapperella',
-  inviterName: 'Khijir'
-};
+  inviteeName: 'Mayabi',
+  inviterName: 'Hasib',
 
-locations: [
-  {
-    name: 'Dhanmondi',
-    emoji: '🏙️',
-    description: 'City lights & treats'
-  },
-  {
-    name: 'Uttora',
-    emoji: '🌿',
-    description: 'Calm & cozy moments'
-  }
-]
+  locations: [
+    {
+      name: 'Dhaka',
+      emoji: '🏙️',
+      description: 'City lights & treats'
+    },
+    {
+      name: 'Cumilla',
+      emoji: '🌿',
+      description: 'Calm & cozy moments'
+    }
+  ]
+};
