@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffd9e8">
+  <meta name="description" content="A sweet little invitation for Mayabi.">
+  <title>For Mayabi ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="invitation-page">
+  <div class="grain"></div>
+  <div class="sticker-field" aria-hidden="true">
+    <span class="sticker s1">🌸</span><span class="sticker s2">🎀</span>
+    <span class="sticker s3">🐰</span><span class="sticker s4">🧸</span>
+    <span class="sticker s5">💌</span><span class="sticker s6">🍓</span>
+    <span class="sticker s7">✨</span><span class="sticker s8">☁️</span>
+  </div>
+
+  <button class="music-pill" id="musicToggle" aria-label="Play music">♫ <span>Play our song</span></button>
+  <audio id="bgMusic" loop preload="none"><source src="assets/our-song.mp3" type="audio/mpeg"></audio>
+
+  <main class="screen-shell">
+    <section class="invite-card" aria-labelledby="question">
+      <div class="mini-label">A tiny question for you</div>
+      <div class="mascot" aria-hidden="true">🐻‍❄️<span>♡</span></div>
+      <h1 id="question"><span data-invitee>Mayabi</span>, would you like to go on a date with me?</h1>
+      <p class="signature">— <span data-inviter>Hasib</span></p>
+      <div class="button-zone" id="buttonZone">
+        <a class="choice-btn yes-btn" href="date.html">Yes! 💗</a>
+        <button class="choice-btn no-btn" id="noBtn" type="button">No</button>
+      </div>
+      <p class="hint">Psst… one button is a little shy!</p>
+    </section>
+  </main>
+  <div id="pleaLayer" class="plea-layer" aria-live="polite"></div>
+  <script src="assets/config.js"></script>
+  <script src="assets/invitation.js"></script>
+</body>
+</html>

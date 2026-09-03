@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffd9e8">
+  <title>Plan Our Date ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="planner-page">
+  <div class="grain"></div>
+  <div class="sticker-field" aria-hidden="true">
+    <span class="sticker s1">🌷</span><span class="sticker s2">🎀</span>
+    <span class="sticker s3">🐇</span><span class="sticker s4">🧁</span>
+    <span class="sticker s5">💞</span><span class="sticker s6">🍓</span>
+  </div>
+  <button class="music-pill" id="musicToggle" aria-label="Play music">♫ <span>Play our song</span></button>
+  <audio id="bgMusic" loop preload="none"><source src="assets/our-song.mp3" type="audio/mpeg"></audio>
+
+  <main class="planner-shell">
+    <section class="planner-card">
+      <header class="planner-header">
+        <span class="tiny-heart">♡</span>
+        <div><p>Yay, <span data-invitee>Mayabi</span>!</p><h1>Let's plan our date</h1></div>
+        <span class="tiny-heart">♡</span>
+      </header>
+      <div class="progress-dots" aria-label="Planning progress">
+        <span class="active"></span><span></span><span></span>
+      </div>
+
+      <form id="dateForm">
+        <section class="form-step active" data-step="0">
+          <div class="step-icon">🗓️</div>
+          <h2>Pick a lovely day</h2>
+          <p>Choose any day that feels perfect.</p>
+          <label class="pretty-input calendar-input">
+            <span>Date</span><input id="dateInput" name="date" type="date" required>
+          </label>
+          <button class="next-btn" type="button" data-next>Continue <span>→</span></button>
+        </section>
+
+        <section class="form-step" data-step="1">
+          <div class="step-icon">📍</div>
+          <h2>Where should we go?</h2>
+          <p>Pick the city for our little adventure.</p>
+          <div class="place-grid">
+            <label class="place-option"><input type="radio" name="place" value="Dhaka"><span class="place-card"><b>🏙️</b><strong>Dhaka</strong><small>City lights & treats</small></span></label>
+            <label class="place-option"><input type="radio" name="place" value="Cumilla"><span class="place-card"><b>🌿</b><strong>Cumilla</strong><small>Calm & cozy moments</small></span></label>
+          </div>
+          <div class="step-actions"><button class="back-btn" type="button" data-back>Back</button><button class="next-btn" type="button" data-next>Continue <span>→</span></button></div>
+        </section>
+
+        <section class="form-step" data-step="2">
+          <div class="step-icon">⏰</div>
+          <h2>What time works for you?</h2>
+          <p>Pick the sweetest time for our plan.</p>
+          <label class="pretty-input time-input"><span>Time</span><input id="timeInput" name="time" type="time" required></label>
+          <div class="summary" id="summary"></div>
+          <div class="step-actions"><button class="back-btn" type="button" data-back>Back</button><button class="final-btn" type="submit">Finalise Date 💗</button></div>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <section class="success-screen" id="successScreen" aria-hidden="true">
+    <div class="success-card"><div class="success-bear">🐻‍❄️💗</div><p>It’s a date!</p><h2>Congratulations!</h2><div id="finalDetails"></div><small>Can’t wait to see you, <span data-invitee>Mayabi</span>.<br>— <span data-inviter>Hasib</span></small></div>
+    <div id="kissRain" aria-hidden="true"></div>
+  </section>
+  <script src="assets/config.js"></script>
+  <script src="assets/planner.js"></script>
+</body>
+</html>
