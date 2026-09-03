@@ -1,4 +1,18 @@
 const config=window.DATE_INVITE_CONFIG||{inviteeName:'Mayabi',inviterName:'Hasib'};document.querySelectorAll('[data-invitee]').forEach(el=>el.textContent=config.inviteeName);document.querySelectorAll('[data-inviter]').forEach(el=>el.textContent=config.inviterName);document.title=`Plan a Date with ${config.inviteeName} ♡`;const FORM_ENDPOINT='https://script.google.com/macros/s/AKfycbxurB_XHQoGd-lCa5ZWO-F3Fdy0KZK9SxT7bGn6QbOcejsVHrFtpbno8_Hy7lmvWBsQ/exec';
+
+const placeGrid = document.querySelector('#placeGrid');
+
+placeGrid.innerHTML = config.locations.map(location => `
+  <label class="place-option">
+    <input type="radio" name="place" value="${location.name}">
+    <span class="place-card">
+      <b>${location.emoji}</b>
+      <strong>${location.name}</strong>
+      <small>${location.description}</small>
+    </span>
+  </label>
+`).join('');
+
 const form=document.querySelector('#dateForm'),steps=[...document.querySelectorAll('.form-step')],dots=[...document.querySelectorAll('.progress-dots span')],dateInput=document.querySelector('#dateInput'),timeInput=document.querySelector('#timeInput'),statusEl=document.querySelector('#formStatus');let current=0;
 const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());dateInput.min=today.toISOString().split('T')[0];
 function validStep(){if(current===0&&!dateInput.value){dateInput.reportValidity();return false}if(current===1&&!form.place.value){statusEl.textContent='Please choose Dhaka or Cumilla 💗';setTimeout(()=>statusEl.textContent='',2200);return false}return true}
