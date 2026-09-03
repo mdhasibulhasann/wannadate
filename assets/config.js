@@ -3,16 +3,13 @@ window.DATE_INVITE_CONFIG = {
   inviteeName: 'Yapperella',
   inviterName: 'Khijir',
 
-  locations: [
-    {
+  locations: 
+    
       name: 'Dhanmondi',
       emoji: '🏙️',
-      description: 'City lights & treats'
-    },
-    {
+      description: 'City lights & treats',
+    
       name: 'Uttora',
       emoji: '🌿',
-      description: 'Calm & cozy moments'
-    }
-  ]
+      description: 'Calm & cozy moments',
 };
